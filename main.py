@@ -43,8 +43,9 @@ if __name__ == '__main__':
                 img_back, (spectrum, mask) = detect_edges(img, hpf, hpf_radio * min(img.shape) / 100)
             else:
                 rin, rout = st.sidebar.slider('band frequency radio', max_value=100., value=(5., 12.), step=.01)
-                img_back, (spectrum, mask) = detect_edges(img, bpf, rin * min(img.shape) / 100,
-                                                          rout * min(img.shape) / 100)
+                img_back, (spectrum, mask) = detect_edges(img, bpf,
+                                                          (rin * min(img.shape) / 100, rout * min(img.shape) / 100)
+                                                          )
 
             st.sidebar.image(image=np.uint8(spectrum), caption='After FFT', use_column_width=True)
             st.sidebar.image(image=np.uint8(mask), caption='FFT + MASK', use_column_width=True)
