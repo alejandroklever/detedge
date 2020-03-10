@@ -1,7 +1,7 @@
 # University of Havana
 # Numerical Math Project
 ### Topic:
-Edge Detection and noise elimination in images using FFT
+Edge Detection and Noise Reduction in images using FFT
 ## Abstract:
 A numerical math class project to analyze the use of the fast fourier transform in image processing with the use of the data visualization tool Streamlit.
 ### Authors:
